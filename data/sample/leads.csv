@@ -1,0 +1,11 @@
+email,first_name,last_name,company,domain,title,employees,industry
+jane.smith@acme.com,Jane,Smith,Acme Corp,acme.com,VP Sales,120,B2B SaaS
+john.doe@acme.com,John,Doe,Acme Corp,acme.com,CRO,120,B2B SaaS
+sarah.chen@brightpath.io,Sarah,Chen,Brightpath Analytics,brightpath.io,Head of Data,85,Data Infrastructure
+mike.ross@brightpath.io,Mike,Ross,Brightpath Analytics,brightpath.io,CFO,85,Data Infrastructure
+lisa.park@retailco.com,Lisa,Park,RetailCo,retailco.com,Marketing Director,15,Consumer Retail
+tom.wilson@globaltech.eu,Tom,Wilson,GlobalTech,globaltech.eu,CEO,200,B2B SaaS
+emma.brown@acme.com,Emma,Brown,Acme Corp,acme.com,Director RevOps,120,B2B SaaS
+david.lee@nimbus.ai,David,Lee,Nimbus AI,nimbus.ai,Founder,45,AI SaaS
+anna.kim@brightpath.io,Anna,Kim,Brightpath Analytics,brightpath.io,VP Engineering,85,Data Infrastructure
+chris.taylor@shopnow.com,Chris,Taylor,ShopNow,shopnow.com,COO,8,E-commerce

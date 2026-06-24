@@ -1,0 +1,14 @@
+Classify the user's question into one intent for routing.
+
+Intents:
+- company_facts: general company info, firmographics, contact details
+- recent_signals: news, alerts, recent events about the company
+- thesis_fit: why scored high/low, ICP fit, qualification reasoning
+
+User question: {question}
+
+Respond with ONLY valid JSON (no markdown fences):
+{{
+  "intent": "company_facts" | "recent_signals" | "thesis_fit",
+  "company_domain": "<domain if mentioned or inferable, else null>"
+}}

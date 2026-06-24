@@ -1,0 +1,28 @@
+email,first_name,last_name,title,company,company_domain,employees,industry,city,state,country,linkedin_url,technologies,annual_revenue
+jane.smith@acme.com,Jane,Smith,VP Sales,Acme Corp,acme.com,120,B2B SaaS,San Francisco,CA,United States,linkedin.com/in/janesmith,Salesforce|HubSpot|Outreach,18000000
+emma.brown@acme.com,Emma,Brown,Director Revenue Operations,Acme Corp,acme.com,120,B2B SaaS,San Francisco,CA,United States,linkedin.com/in/emmabrown,Clari|Gong|Salesforce,18000000
+marcus.vega@acme.com,Marcus,Vega,CRO,Acme Corp,acme.com,120,B2B SaaS,Oakland,CA,United States,linkedin.com/in/marcusvega,Salesforce|LinkedIn Sales Nav,18000000
+sarah.chen@brightpath.io,Sarah,Chen,Head of Data,Brightpath Analytics,brightpath.io,85,Data Infrastructure,New York,NY,United States,linkedin.com/in/sarahchen,Snowflake|dbt|Fivetran,12000000
+mike.ross@brightpath.io,Mike,Ross,CFO,Brightpath Analytics,brightpath.io,85,Data Infrastructure,New York,NY,United States,linkedin.com/in/mikeross,NetSuite|Looker,12000000
+anna.kim@brightpath.io,Anna,Kim,VP Engineering,Brightpath Analytics,brightpath.io,85,Data Infrastructure,Boston,MA,United States,linkedin.com/in/annakim,AWS|Kubernetes|Python,12000000
+david.lee@nimbus.ai,David,Lee,Founder and CEO,Nimbus AI,nimbus.ai,45,AI SaaS,Austin,TX,United States,linkedin.com/in/davidlee,OpenAI|LangChain|Python,8000000
+priya.patel@nimbus.ai,Priya,Patel,Head of Growth,Nimbus AI,nimbus.ai,45,AI SaaS,Austin,TX,United States,linkedin.com/in/priyapatel,HubSpot|Segment|Amplitude,8000000
+lisa.park@retailco.com,Lisa,Park,Marketing Director,RetailCo,retailco.com,15,Consumer Retail,Columbus,OH,United States,linkedin.com/in/lisapark,Shopify|Klaviyo,2200000
+chris.taylor@shopnow.com,Chris,Taylor,COO,ShopNow,shopnow.com,8,E-commerce,Portland,OR,United States,linkedin.com/in/christaylor,Shopify|Gorgias,900000
+tom.wilson@globaltech.eu,Tom,Wilson,CEO,GlobalTech,globaltech.eu,200,B2B SaaS,Berlin,,Germany,linkedin.com/in/tomwilson,SAP|Salesforce,25000000
+helena.kraft@globaltech.eu,Helena,Kraft,VP EMEA Sales,GlobalTech,globaltech.eu,200,B2B SaaS,Munich,,Germany,linkedin.com/in/helenakraft,Salesforce|Pipedrive,25000000
+rachel.foster@ledgerflow.com,Rachel,Foster,VP Sales,LedgerFlow,ledgerflow.com,210,Fintech SaaS,Chicago,IL,United States,linkedin.com/in/rachelfoster,Salesforce|Stripe|Plaid,32000000
+james.wright@ledgerflow.com,James,Wright,Director Sales Ops,LedgerFlow,ledgerflow.com,210,Fintech SaaS,Chicago,IL,United States,linkedin.com/in/jameswright,Clari|Salesforce,32000000
+nina.obrien@stackpilot.dev,Nina,OBrien,Head of Sales,StackPilot,stackpilot.dev,95,Developer Tools,San Jose,CA,United States,linkedin.com/in/ninaobrien,GitHub|Datadog|PagerDuty,14000000
+kevin.nguyen@stackpilot.dev,Kevin,Nguyen,Founding AE,StackPilot,stackpilot.dev,95,Developer Tools,Seattle,WA,United States,linkedin.com/in/kevinnguyen,Outreach|Salesforce,14000000
+olivia.martinez@hirebeam.co,Olivia,Martinez,Chief Revenue Officer,HireBeam,hirebeam.co,160,HR Tech SaaS,Denver,CO,United States,linkedin.com/in/oliviamartinez,Greenhouse|Lever|Gong,22000000
+daniel.hughes@hirebeam.co,Daniel,Hughes,VP Marketing,HireBeam,hirebeam.co,160,HR Tech SaaS,Denver,CO,United States,linkedin.com/in/danielhughes,HubSpot|Marketo,22000000
+sophie.adams@cloudrelay.io,Sophie,Adams,Director IT,CloudRelay,cloudrelay.io,72,Cloud Security,Boston,MA,United States,linkedin.com/in/sophieadams,Okta|CrowdStrike|AWS,11000000
+brian.clark@cloudrelay.io,Brian,Clark,Security Engineer,CloudRelay,cloudrelay.io,72,Cloud Security,Cambridge,MA,United States,linkedin.com/in/brianclark,Splunk|Terraform,11000000
+amanda.torres@freshcart.com,Amanda,Torres,Head of Digital,FreshCart,freshcart.com,35,Grocery Delivery,Miami,FL,United States,linkedin.com/in/amandatorres,Instacart|Shopify,6000000
+ryan.cooper@vertexcrm.com,Ryan,Cooper,VP Sales,Vertex CRM,vertexcrm.com,130,B2B SaaS,Atlanta,GA,United States,linkedin.com/in/ryancooper,Salesforce|ZoomInfo|6sense,19000000
+megan.scott@vertexcrm.com,Megan,Scott,Sales Enablement Lead,Vertex CRM,vertexcrm.com,130,B2B SaaS,Atlanta,GA,United States,linkedin.com/in/meganscott,Seismic|Highspot,19000000
+alex.turner@pipedreamlabs.ai,Alex,Turner,CEO,PipeDream Labs,pipedreamlabs.ai,28,AI SaaS,San Francisco,CA,United States,linkedin.com/in/alexturner,OpenAI|Anthropic|Vercel,4500000
+julia.kim@metricloop.com,Julia,Kim,Director Demand Gen,MetricLoop,metricloop.com,65,Marketing Analytics,Minneapolis,MN,United States,linkedin.com/in/juliakim,HubSpot|Google Analytics,9500000
+carlos.mendez@acme.com,Carlos,Mendez,Enterprise AE,Acme Corp,acme.com,120,B2B SaaS,San Francisco,CA,United States,linkedin.com/in/carlosmendez,Salesforce|LinkedIn,18000000
+hannah.brooks@brightpath.io,Hannah,Brooks,Customer Success Director,Brightpath Analytics,brightpath.io,85,Data Infrastructure,New York,NY,United States,linkedin.com/in/hannahbrooks,Gainsight|Zendesk,12000000

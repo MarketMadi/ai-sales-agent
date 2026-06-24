@@ -1,0 +1,13 @@
+company: Acme Corp
+domain: acme.com
+core_thesis: Mid-market SaaS, 50-200 employees, US-only
+kpis:
+  - ARR_growth
+  - sales_headcount
+risks:
+  - recent_layoffs
+  - PE_owned
+catalysts:
+  - new_CRO_hired
+  - Series_B
+min_score_to_draft: 60

@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f9fafb;
+  color: #111827;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+input,
+textarea {
+  font: inherit;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-strong {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-moderate {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-weak {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-pending {
+  background: #e0e7ff;
+  color: #3730a3;
+}

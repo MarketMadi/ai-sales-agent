@@ -1,0 +1,1088 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Acme Corp",
+      "domain": "acme.com",
+      "email": "jane.smith@acme.com",
+      "enriched_payload": {
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "title": "VP Sales",
+        "employees": "120",
+        "industry": "B2B SaaS",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "United States",
+        "technologies": "Salesforce|HubSpot|Outreach",
+        "annual_revenue": "18000000"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Brightpath Analytics",
+      "domain": "brightpath.io",
+      "email": "sarah.chen@brightpath.io",
+      "enriched_payload": {
+        "first_name": "Sarah",
+        "last_name": "Chen",
+        "title": "Head of Data",
+        "employees": "85",
+        "industry": "Data Infrastructure",
+        "city": "New York",
+        "state": "NY",
+        "country": "United States",
+        "technologies": "Snowflake|dbt|Fivetran",
+        "annual_revenue": "12000000"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Nimbus AI",
+      "domain": "nimbus.ai",
+      "email": "david.lee@nimbus.ai",
+      "enriched_payload": {
+        "first_name": "David",
+        "last_name": "Lee",
+        "title": "Founder and CEO",
+        "employees": "45",
+        "industry": "AI SaaS",
+        "city": "Austin",
+        "state": "TX",
+        "country": "United States",
+        "technologies": "OpenAI|LangChain|Python",
+        "annual_revenue": "8000000"
+      }
+    },
+    {
+      "id": 22,
+      "name": "RetailCo",
+      "domain": "retailco.com",
+      "email": "lisa.park@retailco.com",
+      "enriched_payload": {
+        "first_name": "Lisa",
+        "last_name": "Park",
+        "title": "Marketing Director",
+        "employees": "15",
+        "industry": "Consumer Retail",
+        "city": "Columbus",
+        "state": "OH",
+        "country": "United States",
+        "technologies": "Shopify|Klaviyo",
+        "annual_revenue": "2200000"
+      }
+    },
+    {
+      "id": 26,
+      "name": "ShopNow",
+      "domain": "shopnow.com",
+      "email": "chris.taylor@shopnow.com",
+      "enriched_payload": {
+        "first_name": "Chris",
+        "last_name": "Taylor",
+        "title": "COO",
+        "employees": "8",
+        "industry": "E-commerce",
+        "city": "Portland",
+        "state": "OR",
+        "country": "United States",
+        "technologies": "Shopify|Gorgias",
+        "annual_revenue": "900000"
+      }
+    },
+    {
+      "id": 30,
+      "name": "GlobalTech",
+      "domain": "globaltech.eu",
+      "email": "tom.wilson@globaltech.eu",
+      "enriched_payload": {
+        "first_name": "Tom",
+        "last_name": "Wilson",
+        "title": "CEO",
+        "employees": "200",
+        "industry": "B2B SaaS",
+        "city": "Berlin",
+        "state": "",
+        "country": "Germany",
+        "technologies": "SAP|Salesforce",
+        "annual_revenue": "25000000"
+      }
+    },
+    {
+      "id": 35,
+      "name": "LedgerFlow",
+      "domain": "ledgerflow.com",
+      "email": "rachel.foster@ledgerflow.com",
+      "enriched_payload": {
+        "first_name": "Rachel",
+        "last_name": "Foster",
+        "title": "VP Sales",
+        "employees": "210",
+        "industry": "Fintech SaaS",
+        "city": "Chicago",
+        "state": "IL",
+        "country": "United States",
+        "technologies": "Salesforce|Stripe|Plaid",
+        "annual_revenue": "32000000"
+      }
+    },
+    {
+      "id": 42,
+      "name": "StackPilot",
+      "domain": "stackpilot.dev",
+      "email": "nina.obrien@stackpilot.dev",
+      "enriched_payload": {
+        "first_name": "Nina",
+        "last_name": "OBrien",
+        "title": "Head of Sales",
+        "employees": "95",
+        "industry": "Developer Tools",
+        "city": "San Jose",
+        "state": "CA",
+        "country": "United States",
+        "technologies": "GitHub|Datadog|PagerDuty",
+        "annual_revenue": "14000000"
+      }
+    },
+    {
+      "id": 49,
+      "name": "HireBeam",
+      "domain": "hirebeam.co",
+      "email": "olivia.martinez@hirebeam.co",
+      "enriched_payload": {
+        "first_name": "Olivia",
+        "last_name": "Martinez",
+        "title": "Chief Revenue Officer",
+        "employees": "160",
+        "industry": "HR Tech SaaS",
+        "city": "Denver",
+        "state": "CO",
+        "country": "United States",
+        "technologies": "Greenhouse|Lever|Gong",
+        "annual_revenue": "22000000"
+      }
+    },
+    {
+      "id": 56,
+      "name": "CloudRelay",
+      "domain": "cloudrelay.io",
+      "email": "sophie.adams@cloudrelay.io",
+      "enriched_payload": {
+        "first_name": "Sophie",
+        "last_name": "Adams",
+        "title": "Director IT",
+        "employees": "72",
+        "industry": "Cloud Security",
+        "city": "Boston",
+        "state": "MA",
+        "country": "United States",
+        "technologies": "Okta|CrowdStrike|AWS",
+        "annual_revenue": "11000000"
+      }
+    },
+    {
+      "id": 63,
+      "name": "FreshCart",
+      "domain": "freshcart.com",
+      "email": "amanda.torres@freshcart.com",
+      "enriched_payload": {
+        "first_name": "Amanda",
+        "last_name": "Torres",
+        "title": "Head of Digital",
+        "employees": "35",
+        "industry": "Grocery Delivery",
+        "city": "Miami",
+        "state": "FL",
+        "country": "United States",
+        "technologies": "Instacart|Shopify",
+        "annual_revenue": "6000000"
+      }
+    },
+    {
+      "id": 67,
+      "name": "Vertex CRM",
+      "domain": "vertexcrm.com",
+      "email": "ryan.cooper@vertexcrm.com",
+      "enriched_payload": {
+        "first_name": "Ryan",
+        "last_name": "Cooper",
+        "title": "VP Sales",
+        "employees": "130",
+        "industry": "B2B SaaS",
+        "city": "Atlanta",
+        "state": "GA",
+        "country": "United States",
+        "technologies": "Salesforce|ZoomInfo|6sense",
+        "annual_revenue": "19000000"
+      }
+    },
+    {
+      "id": 74,
+      "name": "PipeDream Labs",
+      "domain": "pipedreamlabs.ai",
+      "email": "alex.turner@pipedreamlabs.ai",
+      "enriched_payload": {
+        "first_name": "Alex",
+        "last_name": "Turner",
+        "title": "CEO",
+        "employees": "28",
+        "industry": "AI SaaS",
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "United States",
+        "technologies": "OpenAI|Anthropic|Vercel",
+        "annual_revenue": "4500000"
+      }
+    },
+    {
+      "id": 78,
+      "name": "MetricLoop",
+      "domain": "metricloop.com",
+      "email": "julia.kim@metricloop.com",
+      "enriched_payload": {
+        "first_name": "Julia",
+        "last_name": "Kim",
+        "title": "Director Demand Gen",
+        "employees": "65",
+        "industry": "Marketing Analytics",
+        "city": "Minneapolis",
+        "state": "MN",
+        "country": "United States",
+        "technologies": "HubSpot|Google Analytics",
+        "annual_revenue": "9500000"
+      }
+    }
+  ],
+  "qualifications": [
+    {
+      "id": 3,
+      "company_id": 1,
+      "score": 84,
+      "icp_fit": "strong",
+      "reasoning": "Acme Corp (acme.com) scored 84/100 — 120 employees, b2b saas, San Francisco CA.",
+      "disqualifiers": [],
+      "talking_points": [
+        "Growth-stage b2b saas with 120 employees"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 11,
+      "company_id": 9,
+      "score": 82,
+      "icp_fit": "strong",
+      "reasoning": "Brightpath Analytics (brightpath.io) scored 82/100 — 85 employees, data infrastructure, New York NY.",
+      "disqualifiers": [],
+      "talking_points": [
+        "Growth-stage data infrastructure with 85 employees"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 19,
+      "company_id": 17,
+      "score": 50,
+      "icp_fit": "moderate",
+      "reasoning": "Nimbus AI (nimbus.ai) scored 50/100 — 45 employees, ai saas, Austin TX.",
+      "disqualifiers": [],
+      "talking_points": [
+        "GTM motion at Nimbus AI"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 24,
+      "company_id": 22,
+      "score": 25,
+      "icp_fit": "disqualified",
+      "reasoning": "RetailCo (retailco.com) scored 25/100 — 15 employees, consumer retail, Columbus OH.",
+      "disqualifiers": [
+        "Consumer-focused industry outside ICP"
+      ],
+      "talking_points": [
+        "GTM motion at RetailCo"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 28,
+      "company_id": 26,
+      "score": 25,
+      "icp_fit": "disqualified",
+      "reasoning": "ShopNow (shopnow.com) scored 25/100 — 8 employees, e-commerce, Portland OR.",
+      "disqualifiers": [
+        "Consumer-focused industry outside ICP"
+      ],
+      "talking_points": [
+        "GTM motion at ShopNow"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 32,
+      "company_id": 30,
+      "score": 35,
+      "icp_fit": "disqualified",
+      "reasoning": "GlobalTech (globaltech.eu) scored 35/100 — 200 employees, b2b saas, Berlin .",
+      "disqualifiers": [
+        "Non-US headquarters"
+      ],
+      "talking_points": [
+        "GTM motion at GlobalTech"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 37,
+      "company_id": 35,
+      "score": 88,
+      "icp_fit": "strong",
+      "reasoning": "LedgerFlow (ledgerflow.com) scored 88/100 — 210 employees, fintech saas, Chicago IL.",
+      "disqualifiers": [],
+      "talking_points": [
+        "Growth-stage fintech saas with 210 employees"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 44,
+      "company_id": 42,
+      "score": 82,
+      "icp_fit": "strong",
+      "reasoning": "StackPilot (stackpilot.dev) scored 82/100 — 95 employees, developer tools, San Jose CA.",
+      "disqualifiers": [],
+      "talking_points": [
+        "Growth-stage developer tools with 95 employees"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 51,
+      "company_id": 49,
+      "score": 86,
+      "icp_fit": "strong",
+      "reasoning": "HireBeam (hirebeam.co) scored 86/100 — 160 employees, hr tech saas, Denver CO.",
+      "disqualifiers": [],
+      "talking_points": [
+        "Growth-stage hr tech saas with 160 employees"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 58,
+      "company_id": 56,
+      "score": 81,
+      "icp_fit": "strong",
+      "reasoning": "CloudRelay (cloudrelay.io) scored 81/100 — 72 employees, cloud security, Boston MA.",
+      "disqualifiers": [],
+      "talking_points": [
+        "Growth-stage cloud security with 72 employees"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 65,
+      "company_id": 63,
+      "score": 25,
+      "icp_fit": "disqualified",
+      "reasoning": "FreshCart (freshcart.com) scored 25/100 — 35 employees, grocery delivery, Miami FL.",
+      "disqualifiers": [
+        "Consumer-focused industry outside ICP"
+      ],
+      "talking_points": [
+        "GTM motion at FreshCart"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 69,
+      "company_id": 67,
+      "score": 84,
+      "icp_fit": "strong",
+      "reasoning": "Vertex CRM (vertexcrm.com) scored 84/100 — 130 employees, b2b saas, Atlanta GA.",
+      "disqualifiers": [],
+      "talking_points": [
+        "Growth-stage b2b saas with 130 employees"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 76,
+      "company_id": 74,
+      "score": 50,
+      "icp_fit": "moderate",
+      "reasoning": "PipeDream Labs (pipedreamlabs.ai) scored 50/100 — 28 employees, ai saas, San Francisco CA.",
+      "disqualifiers": [],
+      "talking_points": [
+        "GTM motion at PipeDream Labs"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 80,
+      "company_id": 78,
+      "score": 81,
+      "icp_fit": "strong",
+      "reasoning": "MetricLoop (metricloop.com) scored 81/100 — 65 employees, marketing analytics, Minneapolis MN.",
+      "disqualifiers": [],
+      "talking_points": [
+        "Growth-stage marketing analytics with 65 employees"
+      ],
+      "model": "demo-scorer",
+      "created_at": "2026-06-24T11:01:47.260Z"
+    }
+  ],
+  "drafts": [
+    {
+      "id": 5,
+      "company_id": 1,
+      "subject": "Quick idea for Acme Corp's GTM team",
+      "body": "Hi Jane,\n\nI noticed Acme Corp is scaling (Growth-stage b2b saas with 120 employees). We help similar teams run AI-scored outbound with human approval before anything sends.\n\nWorth 15 minutes this week?\n\nBest",
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null,
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 13,
+      "company_id": 9,
+      "subject": "Quick idea for Brightpath Analytics's GTM team",
+      "body": "Hi Sarah,\n\nI noticed Brightpath Analytics is scaling (Growth-stage data infrastructure with 85 employees). We help similar teams run AI-scored outbound with human approval before anything sends.\n\nWorth 15 minutes this week?\n\nBest",
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null,
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 39,
+      "company_id": 35,
+      "subject": "Quick idea for LedgerFlow's GTM team",
+      "body": "Hi Rachel,\n\nI noticed LedgerFlow is scaling (Growth-stage fintech saas with 210 employees). We help similar teams run AI-scored outbound with human approval before anything sends.\n\nWorth 15 minutes this week?\n\nBest",
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null,
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 46,
+      "company_id": 42,
+      "subject": "Quick idea for StackPilot's GTM team",
+      "body": "Hi Nina,\n\nI noticed StackPilot is scaling (Growth-stage developer tools with 95 employees). We help similar teams run AI-scored outbound with human approval before anything sends.\n\nWorth 15 minutes this week?\n\nBest",
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null,
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 53,
+      "company_id": 49,
+      "subject": "Quick idea for HireBeam's GTM team",
+      "body": "Hi Olivia,\n\nI noticed HireBeam is scaling (Growth-stage hr tech saas with 160 employees). We help similar teams run AI-scored outbound with human approval before anything sends.\n\nWorth 15 minutes this week?\n\nBest",
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null,
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 60,
+      "company_id": 56,
+      "subject": "Quick idea for CloudRelay's GTM team",
+      "body": "Hi Sophie,\n\nI noticed CloudRelay is scaling (Growth-stage cloud security with 72 employees). We help similar teams run AI-scored outbound with human approval before anything sends.\n\nWorth 15 minutes this week?\n\nBest",
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null,
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 71,
+      "company_id": 67,
+      "subject": "Quick idea for Vertex CRM's GTM team",
+      "body": "Hi Ryan,\n\nI noticed Vertex CRM is scaling (Growth-stage b2b saas with 130 employees). We help similar teams run AI-scored outbound with human approval before anything sends.\n\nWorth 15 minutes this week?\n\nBest",
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null,
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 82,
+      "company_id": 78,
+      "subject": "Quick idea for MetricLoop's GTM team",
+      "body": "Hi Julia,\n\nI noticed MetricLoop is scaling (Growth-stage marketing analytics with 65 employees). We help similar teams run AI-scored outbound with human approval before anything sends.\n\nWorth 15 minutes this week?\n\nBest",
+      "status": "pending",
+      "approved_by": null,
+      "approved_at": null,
+      "created_at": "2026-06-24T11:01:47.260Z"
+    }
+  ],
+  "activities": [
+    {
+      "id": 85,
+      "company_id": 9,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "hannah.brooks@brightpath.io",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 84,
+      "company_id": 1,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "carlos.mendez@acme.com",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 83,
+      "company_id": 78,
+      "action": "draft_created",
+      "actor": "system",
+      "payload": {
+        "subject": "Quick idea for MetricLoop"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 81,
+      "company_id": 78,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 81,
+        "icp_fit": "strong"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 79,
+      "company_id": 78,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "metricloop.com"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 77,
+      "company_id": 74,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 50,
+        "icp_fit": "moderate"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 75,
+      "company_id": 74,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "pipedreamlabs.ai"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 73,
+      "company_id": 67,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "megan.scott@vertexcrm.com",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 72,
+      "company_id": 67,
+      "action": "draft_created",
+      "actor": "system",
+      "payload": {
+        "subject": "Quick idea for Vertex CRM"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 70,
+      "company_id": 67,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 84,
+        "icp_fit": "strong"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 68,
+      "company_id": 67,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "vertexcrm.com"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 66,
+      "company_id": 63,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 25,
+        "icp_fit": "disqualified"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 64,
+      "company_id": 63,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "freshcart.com"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 62,
+      "company_id": 56,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "brian.clark@cloudrelay.io",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 61,
+      "company_id": 56,
+      "action": "draft_created",
+      "actor": "system",
+      "payload": {
+        "subject": "Quick idea for CloudRelay"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 59,
+      "company_id": 56,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 81,
+        "icp_fit": "strong"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 57,
+      "company_id": 56,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "cloudrelay.io"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 55,
+      "company_id": 49,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "daniel.hughes@hirebeam.co",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 54,
+      "company_id": 49,
+      "action": "draft_created",
+      "actor": "system",
+      "payload": {
+        "subject": "Quick idea for HireBeam"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 52,
+      "company_id": 49,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 86,
+        "icp_fit": "strong"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 50,
+      "company_id": 49,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "hirebeam.co"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 48,
+      "company_id": 42,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "kevin.nguyen@stackpilot.dev",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 47,
+      "company_id": 42,
+      "action": "draft_created",
+      "actor": "system",
+      "payload": {
+        "subject": "Quick idea for StackPilot"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 45,
+      "company_id": 42,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 82,
+        "icp_fit": "strong"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 43,
+      "company_id": 42,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "stackpilot.dev"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 41,
+      "company_id": 35,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "james.wright@ledgerflow.com",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 40,
+      "company_id": 35,
+      "action": "draft_created",
+      "actor": "system",
+      "payload": {
+        "subject": "Quick idea for LedgerFlow"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 38,
+      "company_id": 35,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 88,
+        "icp_fit": "strong"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 36,
+      "company_id": 35,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "ledgerflow.com"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 34,
+      "company_id": 30,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "helena.kraft@globaltech.eu",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 33,
+      "company_id": 30,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 35,
+        "icp_fit": "disqualified"
+      },
+      "created_at": "2026-06-24T11:01:47.260Z"
+    },
+    {
+      "id": 31,
+      "company_id": 30,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "globaltech.eu"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 29,
+      "company_id": 26,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 25,
+        "icp_fit": "disqualified"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 27,
+      "company_id": 26,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "shopnow.com"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 25,
+      "company_id": 22,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 25,
+        "icp_fit": "disqualified"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 23,
+      "company_id": 22,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "retailco.com"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 21,
+      "company_id": 17,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "priya.patel@nimbus.ai",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 20,
+      "company_id": 17,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 50,
+        "icp_fit": "moderate"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 18,
+      "company_id": 17,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "nimbus.ai"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 16,
+      "company_id": 9,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "anna.kim@brightpath.io",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 15,
+      "company_id": 9,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "mike.ross@brightpath.io",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 14,
+      "company_id": 9,
+      "action": "draft_created",
+      "actor": "system",
+      "payload": {
+        "subject": "Quick idea for Brightpath Analytics"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 12,
+      "company_id": 9,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 82,
+        "icp_fit": "strong"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 10,
+      "company_id": 9,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "brightpath.io"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 8,
+      "company_id": 1,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "marcus.vega@acme.com",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 7,
+      "company_id": 1,
+      "action": "dedupe_merged",
+      "actor": "system",
+      "payload": {
+        "email": "emma.brown@acme.com",
+        "reason": "duplicate_domain"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 6,
+      "company_id": 1,
+      "action": "draft_created",
+      "actor": "system",
+      "payload": {
+        "subject": "Quick idea for Acme Corp"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 4,
+      "company_id": 1,
+      "action": "company_scored",
+      "actor": "system",
+      "payload": {
+        "score": 84,
+        "icp_fit": "strong"
+      },
+      "created_at": "2026-06-24T11:01:47.259Z"
+    },
+    {
+      "id": 2,
+      "company_id": 1,
+      "action": "company_imported",
+      "actor": "system",
+      "payload": {
+        "source": "apollo_export.csv",
+        "domain": "acme.com"
+      },
+      "created_at": "2026-06-24T11:01:47.258Z"
+    }
+  ],
+  "documents": [
+    {
+      "id": 1,
+      "company_id": 1,
+      "title": "Acme hires new CRO",
+      "body": "Acme Corp named Marcus Vega as CRO to lead mid-market expansion.",
+      "source": "press_release"
+    },
+    {
+      "id": 2,
+      "company_id": 1,
+      "title": "Acme Series B",
+      "body": "Acme closed $40M Series B to scale sales and RevOps.",
+      "source": "news"
+    },
+    {
+      "id": 3,
+      "company_id": 2,
+      "title": "Brightpath platform migration",
+      "body": "Brightpath completed Snowflake migration for enterprise clients.",
+      "source": "blog"
+    }
+  ],
+  "feedback": [],
+  "nextId": 87
+}

@@ -1,0 +1,16 @@
+Write a short personalized cold email for this qualified lead.
+
+Company:
+{company}
+
+Qualification score: {score}
+Reasoning: {reasoning}
+Talking points: {talking_points}
+
+Respond with ONLY valid JSON (no markdown fences):
+{{
+  "subject": "<email subject line>",
+  "body": "<email body, 3-5 sentences, professional but human>"
+}}
+
+Do not use placeholder brackets like [Name]. Use the contact name if known, otherwise "there".

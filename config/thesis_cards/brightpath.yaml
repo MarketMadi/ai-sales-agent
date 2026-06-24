@@ -1,0 +1,13 @@
+company: Brightpath Analytics
+domain: brightpath.io
+core_thesis: Data infrastructure for mid-market finance teams
+kpis:
+  - data_team_hiring
+  - platform_migration
+risks:
+  - heavy_competition
+  - long_sales_cycles
+catalysts:
+  - new_CFO
+  - funding_round
+min_score_to_draft: 55

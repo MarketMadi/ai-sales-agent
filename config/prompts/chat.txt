@@ -1,0 +1,8 @@
+Answer the user's question using ONLY the context below. Every factual claim must cite a source as [source: TYPE:ID] where TYPE is signal, document, or qualification.
+
+Context:
+{context}
+
+User question: {question}
+
+Be concise. If context is insufficient, say so. Include at least one citation when possible.

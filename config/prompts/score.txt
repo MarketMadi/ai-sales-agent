@@ -1,0 +1,24 @@
+You are scoring a company lead against an Ideal Customer Profile (ICP).
+
+ICP definition:
+{icp}
+
+Company data:
+{company}
+
+Recent signals:
+{signals}
+
+Thesis card (if available):
+{thesis}
+
+Respond with ONLY valid JSON (no markdown fences) matching this schema:
+{{
+  "score": <integer 0-100>,
+  "icp_fit": "strong" | "moderate" | "weak" | "disqualified",
+  "reasoning": "<2-4 sentences explaining the score>",
+  "disqualifiers": ["<reason>", ...],
+  "talking_points": ["<personalization angle>", ...]
+}}
+
+Be specific. Reference actual data from the company and signals.

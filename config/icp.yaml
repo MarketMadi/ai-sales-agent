@@ -1,0 +1,14 @@
+name: Default ICP
+description: Mid-market B2B SaaS companies in the US
+criteria:
+  - Industry is B2B SaaS or technology-enabled services
+  - 50-500 employees
+  - US headquarters
+  - Active sales or growth hiring signals
+  - Not recently acquired or in obvious distress
+disqualifiers:
+  - Consumer-only business
+  - Fewer than 20 employees
+  - Outside US without US GTM
+  - Competitor in our category
+min_score_to_draft: 60
