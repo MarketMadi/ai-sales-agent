@@ -22,7 +22,8 @@ export default function DashboardPage() {
     setIngestMsg("Ingesting...");
     try {
       const result = await apiAdmin<{ imported: number; duplicates: number; scored: number }>(
-        "/ingest/csv"
+        "/ingest/csv",
+        { method: "POST" }
       );
       setIngestMsg(`Imported ${result.imported}, dupes ${result.duplicates}, scored ${result.scored}`);
       reload();

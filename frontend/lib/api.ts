@@ -25,7 +25,8 @@ export class ApiError extends Error {
 async function demoRequest<T>(path: string, options?: RequestInit): Promise<T> {
   const { initDemoFromJson, demoApi, ingestDemoCsv } = await import("./demo-store");
   await initDemoFromJson(BASE_PATH);
-  if (path.startsWith("/ingest/csv") && options?.method?.toUpperCase() === "POST") {
+  const method = options?.method?.toUpperCase();
+  if (path.startsWith("/ingest/csv") && method !== "GET") {
     return ingestDemoCsv(BASE_PATH) as Promise<T>;
   }
   return demoApi(path, options) as T;

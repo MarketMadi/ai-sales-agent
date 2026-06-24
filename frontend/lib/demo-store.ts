@@ -332,8 +332,10 @@ export function demoApi(path: string, options?: RequestInit): unknown {
     return state.activities.slice(0, limit);
   }
 
-  if (pathname === "/ingest/csv" && method === "POST") {
-    // Handled separately via ingestCsvFromPublic
+  if (pathname === "/ingest/csv") {
+    if (method === "GET") {
+      return { message: "Use POST to ingest. Click Ingest Apollo CSV on the Dashboard." };
+    }
     return { imported: 0, duplicates: 0, scored: 0 };
   }
 
