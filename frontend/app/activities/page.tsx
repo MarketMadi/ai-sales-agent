@@ -18,7 +18,9 @@ export default function ActivitiesPage() {
   return (
     <div>
       <h1>Audit Log</h1>
-      <p style={{ color: "#6b7280" }}>Every import, score, approval, and feedback event.</p>
+      <p style={{ color: "#6b7280" }}>
+        Full history: every lead imported, scored, approved, or rejected — who did what and when.
+      </p>
       <ApiState loading={loading} error={error} onRetry={reload} />
       {!loading && !error && (
         <table style={{ width: "100%", marginTop: "1rem", borderCollapse: "collapse" }}>

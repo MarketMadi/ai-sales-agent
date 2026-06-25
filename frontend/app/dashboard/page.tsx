@@ -46,12 +46,15 @@ export default function DashboardPage() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "1rem" }}>
         <div>
           <h1 style={{ margin: 0 }}>Dashboard</h1>
-          <p style={{ color: "#6b7280", margin: "0.25rem 0 0", fontSize: "0.9rem" }}>
+          <p style={{ color: "#6b7280", margin: "0.25rem 0 0", fontSize: "0.9rem", maxWidth: 520 }}>
+            Pipeline overview. Click <strong>Ingest Apollo CSV</strong> to load sample leads — AI will score each company and queue outreach drafts for your approval.
+          </p>
+          <p style={{ color: "#6b7280", margin: "0.25rem 0 0", fontSize: "0.85rem" }}>
             Sample:{" "}
             <a href={sampleCsvUrl()} download="apollo_export.csv" style={{ color: "#2563eb" }}>
               apollo_export.csv
             </a>
-            {IS_DEMO_MODE ? " (26 leads, 12 companies)" : ""}
+            {IS_DEMO_MODE ? " (26 leads, 14 companies)" : ""}
           </p>
         </div>
         <button onClick={runIngest} style={btnPrimary}>

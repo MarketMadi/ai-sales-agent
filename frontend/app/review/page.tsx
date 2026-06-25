@@ -89,7 +89,10 @@ export default function ReviewPage() {
   return (
     <div>
       <h1>Review Queue</h1>
-      <p style={{ color: "#6b7280" }}>Nothing sends without approval.</p>
+      <p style={{ color: "#6b7280", maxWidth: 560 }}>
+        AI drafted these emails. Read the score reasoning, edit the copy, then approve or reject.
+        <strong> Nothing sends without your click.</strong>
+      </p>
       <ApiState loading={loading} error={error} onRetry={load} />
       {msg && <p style={{ color: "#059669" }}>{msg}</p>}
 

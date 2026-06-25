@@ -9,12 +9,14 @@ export function DemoBanner() {
       style={{
         background: "#eff6ff",
         borderBottom: "1px solid #bfdbfe",
-        padding: "0.5rem 2rem",
+        padding: "0.6rem 2rem",
         fontSize: "0.875rem",
         color: "#1e40af",
       }}
     >
-      Live demo — runs in your browser with sample Apollo export data. No backend required.
+      <strong>Interactive demo</strong> — sample sales leads, AI scoring, and email drafts. No login, no backend.
+      Start on the <a href="./dashboard/" style={{ color: "#1d4ed8" }}>Dashboard</a> and click{" "}
+      <strong>Ingest Apollo CSV</strong>.
     </div>
   );
 }

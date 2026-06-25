@@ -56,9 +56,8 @@ export default function ChatPage() {
   return (
     <div>
       <h1>Chat</h1>
-      <p style={{ color: "#6b7280" }}>
-        Intent router sends questions to company facts, signals, or thesis fit. Answers include
-        citations.
+      <p style={{ color: "#6b7280", maxWidth: 560 }}>
+        Ask questions about your leads — e.g. &quot;Why did Acme score high?&quot; Answers cite the underlying data.
       </p>
 
       <div className="card" style={{ marginTop: "1rem" }}>

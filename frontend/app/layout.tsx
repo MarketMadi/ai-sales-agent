@@ -4,8 +4,9 @@ import Nav from "@/components/Nav";
 import { DemoBanner } from "@/components/DemoBanner";
 
 export const metadata: Metadata = {
-  title: "Signal Desk",
-  description: "AI pipeline practice project",
+  title: "Signal Desk — AI outbound sales agent demo",
+  description:
+    "Import leads, AI-score against your ICP with reviewable reasoning, approve outreach drafts before they send.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
