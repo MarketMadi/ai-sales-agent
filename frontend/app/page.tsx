@@ -9,7 +9,7 @@ const steps = [
   {
     n: "2",
     title: "AI scores each company",
-    body: "Claude rates fit against your ICP and shows its reasoning — score, fit, talking points.",
+    body: "Claude, GPT-4o, and Gemini score each lead against your ICP — compare outputs side-by-side in Review.",
   },
   {
     n: "3",

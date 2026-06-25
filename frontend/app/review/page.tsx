@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { ApiState } from "@/components/ApiState";
+import { CompareResponse, ModelComparePanel } from "@/components/ModelCompare";
 import { api, apiAdmin, ApiError } from "@/lib/api";
 
 type ReviewItem = {
@@ -34,6 +35,16 @@ export default function ReviewPage() {
   const [msg, setMsg] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [compare, setCompare] = useState<CompareResponse | null>(null);
+  const [compareLoading, setCompareLoading] = useState(false);
+
+  const loadCompare = useCallback((companyId: number) => {
+    setCompareLoading(true);
+    api<CompareResponse>(`/companies/${companyId}/compare`)
+      .then(setCompare)
+      .catch(() => setCompare(null))
+      .finally(() => setCompareLoading(false));
+  }, []);
 
   const load = useCallback(() => {
     setLoading(true);
@@ -45,13 +56,14 @@ export default function ReviewPage() {
           setSelected(data[0]);
           setSubject(data[0].draft.subject);
           setBody(data[0].draft.body);
+          loadCompare(data[0].company.id);
         }
       })
       .catch((e: unknown) => {
         setError(e instanceof ApiError ? e.message : "Failed to load reviews");
       })
       .finally(() => setLoading(false));
-  }, []);
+  }, [loadCompare]);
 
   useEffect(() => {
     load();
@@ -61,8 +73,9 @@ export default function ReviewPage() {
     if (selected) {
       setSubject(selected.draft.subject);
       setBody(selected.draft.body);
+      loadCompare(selected.company.id);
     }
-  }, [selected]);
+  }, [selected, loadCompare]);
 
   async function approve() {
     if (!selected) return;
@@ -138,7 +151,7 @@ export default function ReviewPage() {
 
             {selected.qualification && (
               <section style={{ marginBottom: "1.5rem" }}>
-                <h3>LLM Reasoning</h3>
+                <h3>Primary score (Claude)</h3>
                 <p>{selected.qualification.reasoning}</p>
                 {selected.qualification.disqualifiers?.length > 0 && (
                   <p>
@@ -154,6 +167,8 @@ export default function ReviewPage() {
                 )}
               </section>
             )}
+
+            <ModelComparePanel data={compare} loading={compareLoading} />
 
             <section>
               <h3>Outreach Draft</h3>

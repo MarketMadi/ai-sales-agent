@@ -1,6 +1,6 @@
 from backend.config_loader import format_prompt, load_icp, load_thesis_card
 from backend.db import Company, OutreachDraft, Qualification, Signal, log_activity
-from backend.llm import call_llm
+from backend.llm import MODEL_REGISTRY, call_llm, compare_models
 
 
 def _company_context(company: Company) -> str:
@@ -42,7 +42,7 @@ def score_company(db, company_id: int, draft_if_qualified: bool = True) -> Quali
     )
 
     mock = _mock_score(company, thesis)
-    result, model = call_llm(prompt, mock_response=mock)
+    result, model = call_llm(prompt, model_id="claude-sonnet", mock_response=mock)
 
     qual = Qualification(
         company_id=company_id,
@@ -73,7 +73,37 @@ def score_company(db, company_id: int, draft_if_qualified: bool = True) -> Quali
     return qual
 
 
-def _mock_score(company: Company, thesis: dict | None) -> dict:
+def _build_score_prompt(db, company: Company) -> tuple[str, dict, dict | None]:
+    icp = load_icp()
+    thesis = load_thesis_card(company.domain)
+    prompt = format_prompt(
+        "score",
+        icp=json_dumps(icp),
+        company=_company_context(company),
+        signals=_signals_context(db, company.id),
+        thesis=json_dumps(thesis) if thesis else "None",
+    )
+    return prompt, icp, thesis
+
+
+def compare_models_for_company(db, company_id: int) -> dict | None:
+    company = db.query(Company).filter(Company.id == company_id).first()
+    if not company:
+        return None
+
+    prompt, _, thesis = _build_score_prompt(db, company)
+    comparisons = compare_models(
+        prompt,
+        mock_fn=lambda model_id: _mock_score(company, thesis, model_id),
+    )
+    return {
+        "company_id": company_id,
+        "company_name": company.name,
+        "comparisons": comparisons,
+    }
+
+
+def _mock_score(company: Company, thesis: dict | None, model_id: str = "claude-sonnet") -> dict:
     employees = int(company.enriched_payload.get("employees") or 0)
     industry = (company.enriched_payload.get("industry") or "").lower()
     score = 50
@@ -89,11 +119,21 @@ def _mock_score(company: Company, thesis: dict | None) -> dict:
     elif "eu" in company.domain:
         score = 35
         disqualifiers.append("Non-US headquarters")
-    elif employees >= 50 and ("saas" in industry or "data" in industry):
+    elif employees >= 50 and ("saas" in industry or "data" in industry or "fintech" in industry or "developer" in industry or "cloud" in industry or "marketing" in industry or "ai" in industry):
         score = 82
         talking_points.append(f"Growth-stage {industry} with {employees} employees")
         if thesis:
             talking_points.append(f"Aligns with thesis: {thesis.get('core_thesis')}")
+
+    # Simulate model personality differences in demo/mock mode
+    if model_id == "gpt-4o":
+        score = max(0, min(100, score + 3))
+        reasoning_suffix = " GPT emphasizes GTM motion and expansion signals."
+    elif model_id == "gemini-flash":
+        score = max(0, min(100, score - 5))
+        reasoning_suffix = " Gemini weights geographic and firmographic fit more conservatively."
+    else:
+        reasoning_suffix = " Claude weights ICP criteria and sales leadership contacts heavily."
 
     icp_fit = "disqualified" if score < 40 else "strong" if score >= 70 else "moderate" if score >= 50 else "weak"
     return {
@@ -102,6 +142,7 @@ def _mock_score(company: Company, thesis: dict | None) -> dict:
         "reasoning": (
             f"{company.name} ({company.domain}) scored {score}/100 based on "
             f"{employees} employees in {industry or 'unknown industry'}."
+            f"{reasoning_suffix}"
         ),
         "disqualifiers": disqualifiers,
         "talking_points": talking_points or [f"Recent activity at {company.name}"],

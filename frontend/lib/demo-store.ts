@@ -120,7 +120,7 @@ function normalizeDomain(domain: string | undefined, email: string | null) {
   return null;
 }
 
-function mockScore(company: DemoCompany): Omit<DemoQualification, "id" | "company_id" | "created_at"> {
+function mockScore(company: DemoCompany, modelId = "claude-sonnet"): Omit<DemoQualification, "id" | "company_id" | "created_at"> {
   const employees = parseInt(company.enriched_payload.employees || "0", 10);
   const industry = (company.enriched_payload.industry || "").toLowerCase();
   let score = 50;
@@ -144,14 +144,53 @@ function mockScore(company: DemoCompany): Omit<DemoQualification, "id" | "compan
     }
   }
 
+  let reasoningSuffix = " Claude weights ICP criteria and sales leadership contacts heavily.";
+  if (modelId === "gpt-4o") {
+    score = Math.max(0, Math.min(100, score + 3));
+    reasoningSuffix = " GPT emphasizes GTM motion and expansion signals.";
+  } else if (modelId === "gemini-flash") {
+    score = Math.max(0, Math.min(100, score - 5));
+    reasoningSuffix = " Gemini weights geographic and firmographic fit more conservatively.";
+  }
+
   const icp_fit = score < 40 ? "disqualified" : score >= 70 ? "strong" : score >= 50 ? "moderate" : "weak";
   return {
     score,
     icp_fit,
-    reasoning: `${company.name} (${company.domain}) scored ${score}/100 based on ${employees} employees in ${industry || "unknown industry"}, ${company.enriched_payload.city || ""} ${company.enriched_payload.state || ""}.`,
+    reasoning: `${company.name} (${company.domain}) scored ${score}/100 based on ${employees} employees in ${industry || "unknown industry"}, ${company.enriched_payload.city || ""} ${company.enriched_payload.state || ""}.${reasoningSuffix}`,
     disqualifiers,
     talking_points: talking_points.length ? talking_points : [`Recent GTM activity at ${company.name}`],
-    model: "demo-scorer",
+    model: `demo:${modelId}`,
+  };
+}
+
+function compareModelsDemo(state: DemoState, companyId: number) {
+  const company = state.companies.find((c) => c.id === companyId);
+  if (!company) throw new Error("Company not found");
+  const modelIds = ["claude-sonnet", "gpt-4o", "gemini-flash"];
+  const labels: Record<string, string> = {
+    "claude-sonnet": "Claude Sonnet",
+    "gpt-4o": "GPT-4o",
+    "gemini-flash": "Gemini 2.0 Flash",
+  };
+  return {
+    company_id: companyId,
+    company_name: company.name,
+    comparisons: modelIds.map((modelId) => {
+      const scored = mockScore(company, modelId);
+      return {
+        model_id: modelId,
+        label: labels[modelId],
+        available: true,
+        live: false,
+        model: `demo:${modelId}`,
+        score: scored.score,
+        icp_fit: scored.icp_fit,
+        reasoning: scored.reasoning,
+        disqualifiers: scored.disqualifiers,
+        talking_points: scored.talking_points,
+      };
+    }),
   };
 }
 
@@ -285,6 +324,11 @@ export function demoApi(path: string, options?: RequestInit): unknown {
       rejected: state.drafts.filter((d) => d.status === "rejected").length,
       activities: state.activities.length,
     };
+  }
+
+  const compareMatch = pathname.match(/^\/companies\/(\d+)\/compare$/);
+  if (compareMatch) {
+    return compareModelsDemo(state, parseInt(compareMatch[1], 10));
   }
 
   if (pathname === "/review/pending") {

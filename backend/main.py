@@ -21,7 +21,7 @@ from backend.db import (
 )
 from backend.ingest import ingest_csv_leads, ingest_rss_feed, parse_csv_leads, seed_sample_documents
 from backend.rag import chat
-from backend.score import score_company
+from backend.score import compare_models_for_company, score_company
 from backend.settings import settings
 
 app = FastAPI(title="Signal Desk API", version="1.0.0")
@@ -163,6 +163,14 @@ def get_company(company_id: int, db: Session = Depends(get_db)):
         "qualification": _qual_to_dict(qual) if qual else None,
         "drafts": [_draft_to_dict(d) for d in drafts],
     }
+
+
+@app.get("/companies/{company_id}/compare")
+def compare_company_models(company_id: int, db: Session = Depends(get_db)):
+    result = compare_models_for_company(db, company_id)
+    if not result:
+        raise HTTPException(404, "Company not found")
+    return result
 
 
 @app.post("/companies/{company_id}/score")
