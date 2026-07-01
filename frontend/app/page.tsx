@@ -9,7 +9,7 @@ const steps = [
   {
     n: "2",
     title: "AI scores each company",
-    body: "Claude, GPT-4o, and Gemini score each lead against your ICP — compare outputs side-by-side in Review.",
+    body: "Claude, GPT-4o, Gemini, and DeepSeek score each lead against your ICP — compare outputs side-by-side in Review.",
   },
   {
     n: "3",
@@ -75,6 +75,14 @@ export default function Home() {
 
       <p style={{ marginTop: "2rem", fontSize: "0.85rem", color: "#9ca3af" }}>
         Integrates with Apollo, Attio, Instantly, and Cal.com in production. This demo runs entirely in your browser.
+        {" "}
+        <a href="https://github.com/marketmadi/ai-sales-agent/blob/main/docs/ARCHITECTURE.md" style={{ color: "#2563eb" }}>
+          Architecture doc
+        </a>
+        {" · "}
+        <a href="https://github.com/marketmadi/ai-sales-agent/blob/main/REWORK_SUBMISSION.md" style={{ color: "#2563eb" }}>
+          REWORK walkthrough
+        </a>
       </p>
     </div>
   );

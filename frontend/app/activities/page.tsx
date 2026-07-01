@@ -12,6 +12,10 @@ type Activity = {
   created_at: string;
 };
 
+function isHighlightAction(action: string): boolean {
+  return /^(pipeline_|hubspot_|lead_captured|dedupe_|slack_notify_failed)/.test(action);
+}
+
 export default function ActivitiesPage() {
   const { data: rows, error, loading, reload } = useApi<Activity[]>("/activities?limit=100");
 
@@ -19,7 +23,7 @@ export default function ActivitiesPage() {
     <div>
       <h1>Audit Log</h1>
       <p style={{ color: "#6b7280" }}>
-        Full history: every lead imported, scored, approved, or rejected — who did what and when.
+        Full history: imports, scoring, pipeline retries, HubSpot sync, approvals — who did what and when.
       </p>
       <ApiState loading={loading} error={error} onRetry={reload} />
       {!loading && !error && (
@@ -35,7 +39,13 @@ export default function ActivitiesPage() {
           </thead>
           <tbody>
             {(rows ?? []).map((r) => (
-              <tr key={r.id} style={{ borderBottom: "1px solid #f3f4f6" }}>
+              <tr
+                key={r.id}
+                style={{
+                  borderBottom: "1px solid #f3f4f6",
+                  background: isHighlightAction(r.action) ? "#fef2f2" : undefined,
+                }}
+              >
                 <td style={td}>{new Date(r.created_at).toLocaleString()}</td>
                 <td style={td}>
                   <code>{r.action}</code>

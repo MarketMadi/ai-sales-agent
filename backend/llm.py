@@ -21,6 +21,11 @@ MODEL_REGISTRY: dict[str, dict[str, str]] = {
         "provider": "google",
         "model": "gemini-2.0-flash",
     },
+    "deepseek-chat": {
+        "label": "DeepSeek V3",
+        "provider": "deepseek",
+        "model": "deepseek-chat",
+    },
 }
 
 
@@ -32,6 +37,8 @@ def available_models() -> list[str]:
         available.append("gpt-4o")
     if settings.google_api_key:
         available.append("gemini-flash")
+    if settings.deepseek_api_key:
+        available.append("deepseek-chat")
     return available
 
 
@@ -67,6 +74,21 @@ def _call_openai(prompt: str, model: str) -> str:
     return response.choices[0].message.content or ""
 
 
+def _call_deepseek(prompt: str, model: str) -> str:
+    from openai import OpenAI
+
+    client = OpenAI(
+        api_key=settings.deepseek_api_key,
+        base_url="https://api.deepseek.com",
+    )
+    response = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=1024,
+    )
+    return response.choices[0].message.content or ""
+
+
 def _call_google(prompt: str, model: str) -> str:
     import google.generativeai as genai
 
@@ -93,6 +115,8 @@ def call_llm(
         use_mock = True
     if provider == "google" and not settings.google_api_key:
         use_mock = True
+    if provider == "deepseek" and not settings.deepseek_api_key:
+        use_mock = True
 
     if use_mock:
         data = mock_response or {"message": "mock response"}
@@ -104,6 +128,8 @@ def call_llm(
         text = _call_openai(prompt, model_name)
     elif provider == "google":
         text = _call_google(prompt, model_name)
+    elif provider == "deepseek":
+        text = _call_deepseek(prompt, model_name)
     else:
         raise ValueError(f"Unknown provider: {provider}")
 
@@ -124,6 +150,7 @@ def compare_models(
                 (provider == "anthropic" and settings.anthropic_api_key)
                 or (provider == "openai" and settings.openai_api_key)
                 or (provider == "google" and settings.google_api_key)
+                or (provider == "deepseek" and settings.deepseek_api_key)
             )
             if not has_key and not settings.mock_llm:
                 results.append({

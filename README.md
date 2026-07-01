@@ -78,6 +78,8 @@ cd frontend && npm run build:pages
 
 See [LOOM_SCRIPT.md](./LOOM_SCRIPT.md) for a 5-minute recording outline.
 
+**REWORK Digital application:** see [REWORK_SUBMISSION.md](./REWORK_SUBMISSION.md) and [LOOM_SCRIPT_REWORK.md](./LOOM_SCRIPT_REWORK.md).
+
 ## Config (no redeploy needed)
 
 | Path | Purpose |
@@ -111,6 +113,9 @@ Admin routes require header: `X-Admin-Secret: dev-secret`
 ```bash
 DATABASE_URL=postgresql://signaldesk:signaldesk@localhost:5433/signaldesk
 ANTHROPIC_API_KEY=           # optional
+OPENAI_API_KEY=              # optional — model compare
+GOOGLE_API_KEY=              # optional — model compare
+DEEPSEEK_API_KEY=            # optional — model compare (cheap: platform.deepseek.com)
 MOCK_LLM=false               # auto-mocks when API key empty
 SLACK_WEBHOOK_URL=           # optional, fires on approve
 ADMIN_SECRET=dev-secret

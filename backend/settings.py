@@ -6,6 +6,7 @@ class Settings(BaseSettings):
     anthropic_api_key: str = ""
     openai_api_key: str = ""
     google_api_key: str = ""
+    deepseek_api_key: str = ""
     mock_llm: bool = False
     slack_webhook_url: str = ""
     admin_secret: str = "dev-secret"

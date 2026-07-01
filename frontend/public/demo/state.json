@@ -265,7 +265,7 @@
         "Growth-stage b2b saas with 120 employees"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 11,
@@ -278,7 +278,7 @@
         "Growth-stage data infrastructure with 85 employees"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 19,
@@ -291,7 +291,7 @@
         "GTM motion at Nimbus AI"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 24,
@@ -306,7 +306,7 @@
         "GTM motion at RetailCo"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 28,
@@ -321,7 +321,7 @@
         "GTM motion at ShopNow"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 32,
@@ -336,7 +336,7 @@
         "GTM motion at GlobalTech"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 37,
@@ -349,7 +349,7 @@
         "Growth-stage fintech saas with 210 employees"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 44,
@@ -362,7 +362,7 @@
         "Growth-stage developer tools with 95 employees"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 51,
@@ -375,7 +375,7 @@
         "Growth-stage hr tech saas with 160 employees"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 58,
@@ -388,7 +388,7 @@
         "Growth-stage cloud security with 72 employees"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 65,
@@ -403,7 +403,7 @@
         "GTM motion at FreshCart"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 69,
@@ -416,7 +416,7 @@
         "Growth-stage b2b saas with 130 employees"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 76,
@@ -429,7 +429,7 @@
         "GTM motion at PipeDream Labs"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 80,
@@ -442,7 +442,7 @@
         "Growth-stage marketing analytics with 65 employees"
       ],
       "model": "demo-scorer",
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     }
   ],
   "drafts": [
@@ -454,7 +454,7 @@
       "status": "pending",
       "approved_by": null,
       "approved_at": null,
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 13,
@@ -464,7 +464,7 @@
       "status": "pending",
       "approved_by": null,
       "approved_at": null,
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 39,
@@ -474,7 +474,7 @@
       "status": "pending",
       "approved_by": null,
       "approved_at": null,
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 46,
@@ -484,7 +484,7 @@
       "status": "pending",
       "approved_by": null,
       "approved_at": null,
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 53,
@@ -494,7 +494,7 @@
       "status": "pending",
       "approved_by": null,
       "approved_at": null,
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 60,
@@ -504,7 +504,7 @@
       "status": "pending",
       "approved_by": null,
       "approved_at": null,
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 71,
@@ -514,7 +514,7 @@
       "status": "pending",
       "approved_by": null,
       "approved_at": null,
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 82,
@@ -524,10 +524,83 @@
       "status": "pending",
       "approved_by": null,
       "approved_at": null,
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     }
   ],
   "activities": [
+    {
+      "id": 93,
+      "company_id": 42,
+      "action": "slack_notify_failed",
+      "actor": "system",
+      "payload": {
+        "error": "webhook timeout (demo)"
+      },
+      "created_at": "2026-07-01T07:52:41.696Z"
+    },
+    {
+      "id": 92,
+      "company_id": 42,
+      "action": "pipeline_completed",
+      "actor": "system",
+      "payload": {
+        "job_id": 86
+      },
+      "created_at": "2026-07-01T07:52:41.696Z"
+    },
+    {
+      "id": 91,
+      "company_id": 42,
+      "action": "hubspot_synced",
+      "actor": "system",
+      "payload": {
+        "hubspot_contact_id": "hs_demo_stackpilot"
+      },
+      "created_at": "2026-07-01T07:52:41.696Z"
+    },
+    {
+      "id": 90,
+      "company_id": 42,
+      "action": "pipeline_scored",
+      "actor": "system",
+      "payload": {
+        "attempt": 3
+      },
+      "created_at": "2026-07-01T07:52:41.696Z"
+    },
+    {
+      "id": 89,
+      "company_id": 42,
+      "action": "pipeline_scoring_retry",
+      "actor": "system",
+      "payload": {
+        "attempt": 2,
+        "max_retries": 3
+      },
+      "created_at": "2026-07-01T07:52:41.696Z"
+    },
+    {
+      "id": 88,
+      "company_id": 42,
+      "action": "pipeline_scoring_retry",
+      "actor": "system",
+      "payload": {
+        "attempt": 1,
+        "max_retries": 3
+      },
+      "created_at": "2026-07-01T07:52:41.696Z"
+    },
+    {
+      "id": 87,
+      "company_id": null,
+      "action": "lead_captured",
+      "actor": "system",
+      "payload": {
+        "source": "landing_page",
+        "job_id": 86
+      },
+      "created_at": "2026-07-01T07:52:41.696Z"
+    },
     {
       "id": 85,
       "company_id": 9,
@@ -537,7 +610,7 @@
         "email": "hannah.brooks@brightpath.io",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 84,
@@ -548,7 +621,7 @@
         "email": "carlos.mendez@acme.com",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 83,
@@ -558,7 +631,7 @@
       "payload": {
         "subject": "Quick idea for MetricLoop"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 81,
@@ -569,7 +642,7 @@
         "score": 81,
         "icp_fit": "strong"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 79,
@@ -580,7 +653,7 @@
         "source": "apollo_export.csv",
         "domain": "metricloop.com"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 77,
@@ -591,7 +664,7 @@
         "score": 50,
         "icp_fit": "moderate"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 75,
@@ -602,7 +675,7 @@
         "source": "apollo_export.csv",
         "domain": "pipedreamlabs.ai"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 73,
@@ -613,7 +686,7 @@
         "email": "megan.scott@vertexcrm.com",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 72,
@@ -623,7 +696,7 @@
       "payload": {
         "subject": "Quick idea for Vertex CRM"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 70,
@@ -634,7 +707,7 @@
         "score": 84,
         "icp_fit": "strong"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 68,
@@ -645,7 +718,7 @@
         "source": "apollo_export.csv",
         "domain": "vertexcrm.com"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 66,
@@ -656,7 +729,7 @@
         "score": 25,
         "icp_fit": "disqualified"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 64,
@@ -667,7 +740,7 @@
         "source": "apollo_export.csv",
         "domain": "freshcart.com"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 62,
@@ -678,7 +751,7 @@
         "email": "brian.clark@cloudrelay.io",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 61,
@@ -688,7 +761,7 @@
       "payload": {
         "subject": "Quick idea for CloudRelay"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 59,
@@ -699,7 +772,7 @@
         "score": 81,
         "icp_fit": "strong"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 57,
@@ -710,7 +783,7 @@
         "source": "apollo_export.csv",
         "domain": "cloudrelay.io"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 55,
@@ -721,7 +794,7 @@
         "email": "daniel.hughes@hirebeam.co",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 54,
@@ -731,7 +804,7 @@
       "payload": {
         "subject": "Quick idea for HireBeam"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 52,
@@ -742,7 +815,7 @@
         "score": 86,
         "icp_fit": "strong"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 50,
@@ -753,7 +826,7 @@
         "source": "apollo_export.csv",
         "domain": "hirebeam.co"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.696Z"
     },
     {
       "id": 48,
@@ -764,7 +837,7 @@
         "email": "kevin.nguyen@stackpilot.dev",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 47,
@@ -774,7 +847,7 @@
       "payload": {
         "subject": "Quick idea for StackPilot"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 45,
@@ -785,7 +858,7 @@
         "score": 82,
         "icp_fit": "strong"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 43,
@@ -796,7 +869,7 @@
         "source": "apollo_export.csv",
         "domain": "stackpilot.dev"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 41,
@@ -807,7 +880,7 @@
         "email": "james.wright@ledgerflow.com",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 40,
@@ -817,7 +890,7 @@
       "payload": {
         "subject": "Quick idea for LedgerFlow"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 38,
@@ -828,7 +901,7 @@
         "score": 88,
         "icp_fit": "strong"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 36,
@@ -839,7 +912,7 @@
         "source": "apollo_export.csv",
         "domain": "ledgerflow.com"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 34,
@@ -850,7 +923,7 @@
         "email": "helena.kraft@globaltech.eu",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 33,
@@ -861,7 +934,7 @@
         "score": 35,
         "icp_fit": "disqualified"
       },
-      "created_at": "2026-06-24T11:01:47.260Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 31,
@@ -872,7 +945,7 @@
         "source": "apollo_export.csv",
         "domain": "globaltech.eu"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 29,
@@ -883,7 +956,7 @@
         "score": 25,
         "icp_fit": "disqualified"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 27,
@@ -894,7 +967,7 @@
         "source": "apollo_export.csv",
         "domain": "shopnow.com"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 25,
@@ -905,7 +978,7 @@
         "score": 25,
         "icp_fit": "disqualified"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 23,
@@ -916,7 +989,7 @@
         "source": "apollo_export.csv",
         "domain": "retailco.com"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 21,
@@ -927,7 +1000,7 @@
         "email": "priya.patel@nimbus.ai",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 20,
@@ -938,7 +1011,7 @@
         "score": 50,
         "icp_fit": "moderate"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 18,
@@ -949,7 +1022,7 @@
         "source": "apollo_export.csv",
         "domain": "nimbus.ai"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 16,
@@ -960,7 +1033,7 @@
         "email": "anna.kim@brightpath.io",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 15,
@@ -971,7 +1044,7 @@
         "email": "mike.ross@brightpath.io",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 14,
@@ -981,7 +1054,7 @@
       "payload": {
         "subject": "Quick idea for Brightpath Analytics"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 12,
@@ -992,7 +1065,7 @@
         "score": 82,
         "icp_fit": "strong"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 10,
@@ -1003,7 +1076,7 @@
         "source": "apollo_export.csv",
         "domain": "brightpath.io"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 8,
@@ -1014,7 +1087,7 @@
         "email": "marcus.vega@acme.com",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 7,
@@ -1025,7 +1098,7 @@
         "email": "emma.brown@acme.com",
         "reason": "duplicate_domain"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 6,
@@ -1035,7 +1108,7 @@
       "payload": {
         "subject": "Quick idea for Acme Corp"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 4,
@@ -1046,7 +1119,7 @@
         "score": 84,
         "icp_fit": "strong"
       },
-      "created_at": "2026-06-24T11:01:47.259Z"
+      "created_at": "2026-07-01T07:52:41.695Z"
     },
     {
       "id": 2,
@@ -1057,7 +1130,25 @@
         "source": "apollo_export.csv",
         "domain": "acme.com"
       },
-      "created_at": "2026-06-24T11:01:47.258Z"
+      "created_at": "2026-07-01T07:52:41.694Z"
+    }
+  ],
+  "pipelineJobs": [
+    {
+      "id": 86,
+      "status": "completed",
+      "company_id": 42,
+      "hubspot_contact_id": "hs_demo_stackpilot",
+      "retry_count": 2,
+      "last_error": null,
+      "payload": {
+        "email": "jordan.lee@stackpilot.dev",
+        "company": "StackPilot",
+        "domain": "stackpilot.dev",
+        "source": "landing_page"
+      },
+      "created_at": "2026-07-01T07:52:41.696Z",
+      "updated_at": "2026-07-01T07:52:41.696Z"
     }
   ],
   "documents": [
@@ -1084,5 +1175,5 @@
     }
   ],
   "feedback": [],
-  "nextId": 87
+  "nextId": 95
 }

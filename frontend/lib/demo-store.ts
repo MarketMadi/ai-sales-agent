@@ -48,9 +48,22 @@ export type DemoState = {
   qualifications: DemoQualification[];
   drafts: DemoDraft[];
   activities: DemoActivity[];
+  pipelineJobs: DemoPipelineJob[];
   documents: { id: number; company_id: number; title: string; body: string; source: string }[];
   feedback: { id: number; company_id: number; useful: boolean; note: string | null }[];
   nextId: number;
+};
+
+export type DemoPipelineJob = {
+  id: number;
+  status: string;
+  company_id: number | null;
+  hubspot_contact_id: string | null;
+  retry_count: number;
+  last_error: string | null;
+  payload: Record<string, string>;
+  created_at: string;
+  updated_at: string;
 };
 
 const STORAGE_KEY = "signal-desk-demo-state";
@@ -87,6 +100,7 @@ function emptyState(): DemoState {
     qualifications: [],
     drafts: [],
     activities: [],
+    pipelineJobs: [],
     documents: [],
     feedback: [],
     nextId: 1,
@@ -151,6 +165,9 @@ function mockScore(company: DemoCompany, modelId = "claude-sonnet"): Omit<DemoQu
   } else if (modelId === "gemini-flash") {
     score = Math.max(0, Math.min(100, score - 5));
     reasoningSuffix = " Gemini weights geographic and firmographic fit more conservatively.";
+  } else if (modelId === "deepseek-chat") {
+    score = Math.max(0, Math.min(100, score + 1));
+    reasoningSuffix = " DeepSeek applies a pragmatic B2B lens with emphasis on firmographic fit.";
   }
 
   const icp_fit = score < 40 ? "disqualified" : score >= 70 ? "strong" : score >= 50 ? "moderate" : "weak";
@@ -167,11 +184,12 @@ function mockScore(company: DemoCompany, modelId = "claude-sonnet"): Omit<DemoQu
 function compareModelsDemo(state: DemoState, companyId: number) {
   const company = state.companies.find((c) => c.id === companyId);
   if (!company) throw new Error("Company not found");
-  const modelIds = ["claude-sonnet", "gpt-4o", "gemini-flash"];
+  const modelIds = ["claude-sonnet", "gpt-4o", "gemini-flash", "deepseek-chat"];
   const labels: Record<string, string> = {
     "claude-sonnet": "Claude Sonnet",
     "gpt-4o": "GPT-4o",
     "gemini-flash": "Gemini 2.0 Flash",
+    "deepseek-chat": "DeepSeek V3",
   };
   return {
     company_id: companyId,
@@ -323,7 +341,42 @@ export function demoApi(path: string, options?: RequestInit): unknown {
       approved: state.drafts.filter((d) => d.status === "approved").length,
       rejected: state.drafts.filter((d) => d.status === "rejected").length,
       activities: state.activities.length,
+      pipeline_pending: state.pipelineJobs.filter((j) => ["pending", "processing", "retrying"].includes(j.status)).length,
+      pipeline_completed: state.pipelineJobs.filter((j) => j.status === "completed").length,
+      pipeline_dead: state.pipelineJobs.filter((j) => j.status === "dead").length,
     };
+  }
+
+  if (pathname === "/pipeline/jobs") {
+    const limit = parseInt(url.searchParams.get("limit") || "20", 10);
+    if (state.pipelineJobs.length > 0) {
+      return state.pipelineJobs.slice(0, limit);
+    }
+    return [];
+  }
+
+  if (pathname === "/webhooks/lead" && method === "POST") {
+    const body = JSON.parse((options?.body as string) || "{}");
+    const jobId = nextId(state);
+    const job: DemoPipelineJob = {
+      id: jobId,
+      status: "completed",
+      company_id: null,
+      hubspot_contact_id: `hs_demo_${jobId}`,
+      retry_count: 2,
+      last_error: null,
+      payload: body,
+      created_at: now(),
+      updated_at: now(),
+    };
+    state.pipelineJobs.unshift(job);
+    log(state, "lead_captured", null, { job_id: jobId });
+    log(state, "pipeline_scoring_retry", null, { attempt: 1 });
+    log(state, "pipeline_scoring_retry", null, { attempt: 2 });
+    log(state, "hubspot_synced", null, { hubspot_contact_id: job.hubspot_contact_id });
+    log(state, "pipeline_completed", null, { job_id: jobId });
+    saveState(state);
+    return { job_id: jobId, status: "accepted", message: "Lead persisted; processing async" };
   }
 
   const compareMatch = pathname.match(/^\/companies\/(\d+)\/compare$/);

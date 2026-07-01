@@ -22,6 +22,7 @@ const MODEL_LABELS: Record<string, string> = {
   "claude-sonnet": "Claude Sonnet",
   "gpt-4o": "GPT-4o",
   "gemini-flash": "Gemini 2.0 Flash",
+  "deepseek-chat": "DeepSeek V3",
 };
 
 export function ModelComparePanel({ data, loading }: { data: CompareResponse | null; loading: boolean }) {

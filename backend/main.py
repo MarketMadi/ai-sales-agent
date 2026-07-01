@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Optional
 
 import httpx
-from fastapi import Depends, FastAPI, Header, HTTPException
+from fastapi import BackgroundTasks, Depends, FastAPI, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
@@ -14,12 +14,14 @@ from backend.db import (
     Company,
     Feedback,
     OutreachDraft,
+    PipelineJob,
     Qualification,
     SessionLocal,
     init_db,
     log_activity,
 )
 from backend.ingest import ingest_csv_leads, ingest_rss_feed, parse_csv_leads, seed_sample_documents
+from backend.pipeline import enqueue_lead, process_lead_job
 from backend.rag import chat
 from backend.score import compare_models_for_company, score_company
 from backend.settings import settings
@@ -81,6 +83,18 @@ class RssIngestRequest(BaseModel):
     company_domain: Optional[str] = None
 
 
+class LeadWebhookRequest(BaseModel):
+    email: Optional[str] = None
+    company: Optional[str] = None
+    domain: Optional[str] = None
+    title: Optional[str] = None
+    employees: Optional[str] = None
+    industry: Optional[str] = None
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    source: str = "webhook"
+
+
 @app.on_event("startup")
 def startup():
     init_db()
@@ -113,6 +127,37 @@ def ingest_csv(
 @app.post("/ingest/rss")
 def ingest_rss(body: RssIngestRequest, db: Session = Depends(get_db), _: None = Depends(verify_admin)):
     return ingest_rss_feed(body.url, db, body.company_domain)
+
+
+@app.post("/webhooks/lead", status_code=202)
+def webhook_lead(
+    body: LeadWebhookRequest,
+    background_tasks: BackgroundTasks,
+    simulate_retries: int = 0,
+    db: Session = Depends(get_db),
+):
+    """Accept a lead immediately (202), process scoring + HubSpot async."""
+    payload = body.model_dump()
+    if simulate_retries > 0:
+        payload["_simulate_retries"] = simulate_retries
+        payload["_demo_scoring"] = True
+    job = enqueue_lead(db, payload)
+    background_tasks.add_task(process_lead_job, job.id)
+    return {"job_id": job.id, "status": "accepted", "message": "Lead persisted; processing async"}
+
+
+@app.get("/pipeline/jobs")
+def list_pipeline_jobs(limit: int = 20, db: Session = Depends(get_db)):
+    rows = db.query(PipelineJob).order_by(PipelineJob.created_at.desc()).limit(limit).all()
+    return [_job_to_dict(j) for j in rows]
+
+
+@app.get("/pipeline/jobs/{job_id}")
+def get_pipeline_job(job_id: int, db: Session = Depends(get_db)):
+    job = db.query(PipelineJob).filter(PipelineJob.id == job_id).first()
+    if not job:
+        raise HTTPException(404, "Job not found")
+    return _job_to_dict(job)
 
 
 @app.get("/companies")
@@ -279,6 +324,9 @@ def dashboard(db: Session = Depends(get_db)):
     approved = db.query(OutreachDraft).filter(OutreachDraft.status == "approved").count()
     rejected = db.query(OutreachDraft).filter(OutreachDraft.status == "rejected").count()
     activities = db.query(Activity).count()
+    pipeline_pending = db.query(PipelineJob).filter(PipelineJob.status.in_(("pending", "processing", "retrying"))).count()
+    pipeline_completed = db.query(PipelineJob).filter(PipelineJob.status == "completed").count()
+    pipeline_dead = db.query(PipelineJob).filter(PipelineJob.status == "dead").count()
     return {
         "companies": companies,
         "qualified": qualifications,
@@ -286,6 +334,9 @@ def dashboard(db: Session = Depends(get_db)):
         "approved": approved,
         "rejected": rejected,
         "activities": activities,
+        "pipeline_pending": pipeline_pending,
+        "pipeline_completed": pipeline_completed,
+        "pipeline_dead": pipeline_dead,
     }
 
 
@@ -355,6 +406,20 @@ def _draft_to_dict(draft: OutreachDraft) -> dict:
         "approved_by": draft.approved_by,
         "approved_at": draft.approved_at.isoformat() if draft.approved_at else None,
         "created_at": draft.created_at.isoformat(),
+    }
+
+
+def _job_to_dict(job: PipelineJob) -> dict:
+    return {
+        "id": job.id,
+        "status": job.status,
+        "company_id": job.company_id,
+        "hubspot_contact_id": job.hubspot_contact_id,
+        "retry_count": job.retry_count,
+        "last_error": job.last_error,
+        "payload": {k: v for k, v in job.payload.items() if not str(k).startswith("_")},
+        "created_at": job.created_at.isoformat(),
+        "updated_at": job.updated_at.isoformat(),
     }
 
 

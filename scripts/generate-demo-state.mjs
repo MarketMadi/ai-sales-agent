@@ -63,6 +63,7 @@ const state = {
   qualifications: [],
   drafts: [],
   activities: [],
+  pipelineJobs: [],
   documents: [
     { id: 1, company_id: 1, title: "Acme hires new CRO", body: "Acme Corp named Marcus Vega as CRO to lead mid-market expansion.", source: "press_release" },
     { id: 2, company_id: 1, title: "Acme Series B", body: "Acme closed $40M Series B to scale sales and RevOps.", source: "news" },
@@ -141,6 +142,36 @@ for (const row of rows) {
   } else {
     log("dedupe_merged", seenDomains.get(domain).id, { email, reason: "duplicate_domain" });
   }
+}
+
+// REWORK demo: webhook pipeline + retries visible in Audit Log on GitHub Pages
+const stackPilot = state.companies.find((c) => c.domain === "stackpilot.dev") || state.companies[0];
+if (stackPilot) {
+  const jobId = nextId++;
+  const ts = new Date().toISOString();
+  state.pipelineJobs.push({
+    id: jobId,
+    status: "completed",
+    company_id: stackPilot.id,
+    hubspot_contact_id: "hs_demo_stackpilot",
+    retry_count: 2,
+    last_error: null,
+    payload: {
+      email: "jordan.lee@stackpilot.dev",
+      company: "StackPilot",
+      domain: "stackpilot.dev",
+      source: "landing_page",
+    },
+    created_at: ts,
+    updated_at: ts,
+  });
+  log("lead_captured", null, { source: "landing_page", job_id: jobId });
+  log("pipeline_scoring_retry", stackPilot.id, { attempt: 1, max_retries: 3 });
+  log("pipeline_scoring_retry", stackPilot.id, { attempt: 2, max_retries: 3 });
+  log("pipeline_scored", stackPilot.id, { attempt: 3 });
+  log("hubspot_synced", stackPilot.id, { hubspot_contact_id: "hs_demo_stackpilot" });
+  log("pipeline_completed", stackPilot.id, { job_id: jobId });
+  log("slack_notify_failed", stackPilot.id, { error: "webhook timeout (demo)" });
 }
 
 state.nextId = nextId + 1;

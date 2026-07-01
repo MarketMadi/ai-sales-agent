@@ -26,7 +26,9 @@ def _signals_context(db, company_id: int) -> str:
     )
 
 
-def score_company(db, company_id: int, draft_if_qualified: bool = True) -> Qualification | None:
+def score_company(
+    db, company_id: int, draft_if_qualified: bool = True, force_mock: bool = False
+) -> Qualification | None:
     company = db.query(Company).filter(Company.id == company_id).first()
     if not company:
         return None
@@ -42,7 +44,10 @@ def score_company(db, company_id: int, draft_if_qualified: bool = True) -> Quali
     )
 
     mock = _mock_score(company, thesis)
-    result, model = call_llm(prompt, model_id="claude-sonnet", mock_response=mock)
+    if force_mock:
+        result, model = mock, "mock:claude-sonnet"
+    else:
+        result, model = call_llm(prompt, model_id="claude-sonnet", mock_response=mock)
 
     qual = Qualification(
         company_id=company_id,
@@ -132,6 +137,9 @@ def _mock_score(company: Company, thesis: dict | None, model_id: str = "claude-s
     elif model_id == "gemini-flash":
         score = max(0, min(100, score - 5))
         reasoning_suffix = " Gemini weights geographic and firmographic fit more conservatively."
+    elif model_id == "deepseek-chat":
+        score = max(0, min(100, score + 1))
+        reasoning_suffix = " DeepSeek applies a pragmatic B2B lens with emphasis on firmographic fit."
     else:
         reasoning_suffix = " Claude weights ICP criteria and sales leadership contacts heavily."
 
