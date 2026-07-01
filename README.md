@@ -76,9 +76,7 @@ cd frontend && npm run build:pages
 
 ## Loom script
 
-See [LOOM_SCRIPT.md](./LOOM_SCRIPT.md) for a 5-minute recording outline.
-
-**REWORK Digital application:** see [REWORK_SUBMISSION.md](./REWORK_SUBMISSION.md) and [LOOM_SCRIPT_REWORK.md](./LOOM_SCRIPT_REWORK.md).
+See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) for stakeholder-facing system overview.
 
 ## Config (no redeploy needed)
 

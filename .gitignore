@@ -7,3 +7,9 @@ __pycache__/
 .env
 .env.local
 pgdata/
+
+# Local-only application / recording notes (not published)
+LOOM_SCRIPT.md
+LOOM_SCRIPT_REWORK.md
+REWORK_SUBMISSION.md
+scripts/rework-demo.sh

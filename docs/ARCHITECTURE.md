@@ -92,6 +92,6 @@ Webhook POST
 ## For reviewers
 
 - **Q1 Project proof:** Dashboard → Ingest or Simulate Webhook → Review → Audit Log  
-- **Q2 Error handling:** Run `scripts/rework-demo.sh` → Audit Log filter `pipeline_*`  
+- **Q2 Error handling:** Audit Log on the live demo — filter `pipeline_*` and `hubspot_*` events
 - **Q3 This document** + optional Loom walkthrough  
 - **Q4 Timeout fix:** See "Error handling" section above — implemented as async pipeline jobs

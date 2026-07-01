@@ -79,10 +79,6 @@ export default function Home() {
         <a href="https://github.com/marketmadi/ai-sales-agent/blob/main/docs/ARCHITECTURE.md" style={{ color: "#2563eb" }}>
           Architecture doc
         </a>
-        {" · "}
-        <a href="https://github.com/marketmadi/ai-sales-agent/blob/main/REWORK_SUBMISSION.md" style={{ color: "#2563eb" }}>
-          REWORK walkthrough
-        </a>
       </p>
     </div>
   );
