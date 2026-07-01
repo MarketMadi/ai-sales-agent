@@ -74,9 +74,9 @@ cd frontend && npm run build:pages
 # static files in frontend/out
 ```
 
-## Loom script
+## Architecture
 
-See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) for stakeholder-facing system overview.
+See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) for system overview (happy path, ROI, error handling).
 
 ## Config (no redeploy needed)
 

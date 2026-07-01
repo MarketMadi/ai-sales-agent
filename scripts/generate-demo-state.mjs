@@ -144,7 +144,7 @@ for (const row of rows) {
   }
 }
 
-// REWORK demo: webhook pipeline + retries visible in Audit Log on GitHub Pages
+// Pre-seed a completed webhook pipeline job (retries + HubSpot sync) for the GitHub Pages demo
 const stackPilot = state.companies.find((c) => c.domain === "stackpilot.dev") || state.companies[0];
 if (stackPilot) {
   const jobId = nextId++;

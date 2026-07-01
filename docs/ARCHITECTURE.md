@@ -1,6 +1,6 @@
-# Signal Desk — Architecture (stakeholder view)
+# Signal Desk — Architecture
 
-Plain-language overview for non-technical reviewers. Technical details at the end.
+Plain-language overview for stakeholders. Technical details at the end.
 
 ---
 
@@ -43,9 +43,9 @@ Nothing sends without a person clicking **Approve**.
 
 ## Error handling — no lead lost
 
-### Problem they asked about
+### Common failure mode
 
-> Webhook → OpenAI scoring → HubSpot fails 10% of the time when OpenAI takes >30s.
+> Webhook → OpenAI scoring → HubSpot fails when OpenAI takes longer than the webhook timeout (~30s).
 
 ### Our architecture
 
@@ -86,12 +86,3 @@ Webhook POST
 | AI | Claude (primary), OpenAI, Gemini, DeepSeek |
 | Config | YAML (ICP, thesis cards) + text prompts |
 | Integrations | Webhook ingest, HubSpot sync (mock/real), Slack on approve |
-
----
-
-## For reviewers
-
-- **Q1 Project proof:** Dashboard → Ingest or Simulate Webhook → Review → Audit Log  
-- **Q2 Error handling:** Audit Log on the live demo — filter `pipeline_*` and `hubspot_*` events
-- **Q3 This document** + optional Loom walkthrough  
-- **Q4 Timeout fix:** See "Error handling" section above — implemented as async pipeline jobs

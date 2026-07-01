@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Demo script for Loom recording — exercises the full Signal Desk flow
+# Demo script — exercises the full Signal Desk flow via API
 set -euo pipefail
 API="${API_URL:-http://localhost:8000}"
 SECRET="${ADMIN_SECRET:-dev-secret}"
@@ -27,7 +27,7 @@ if [ -n "$DRAFT_ID" ]; then
   curl -s -X POST "$API/review/$DRAFT_ID/approve" \
     -H "Content-Type: application/json" \
     -H "X-Admin-Secret: $SECRET" \
-    -d '{"actor":"loom-demo"}' | jq .
+    -d '{"actor":"api-demo"}' | jq .
 
   echo ""
   echo "6. Audit log (latest)"

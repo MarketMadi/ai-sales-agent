@@ -120,7 +120,7 @@ def _score_with_retries(db: Session, job: PipelineJob, company: Company) -> None
                 job.payload = {**job.payload, "_simulate_retries": simulate}
                 db.commit()
                 raise ScoringTimeoutError("OpenAI scoring timed out (>30s)")
-            use_mock = True  # pipeline demo path — architecture proof; CSV ingest uses live LLM
+            use_mock = True  # webhook pipeline uses mock scoring; CSV ingest uses live LLM
             score_company(db, company.id, force_mock=use_mock)
             log_activity(
                 db,

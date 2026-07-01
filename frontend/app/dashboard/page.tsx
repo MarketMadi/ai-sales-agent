@@ -67,7 +67,7 @@ export default function DashboardPage() {
           }),
         }
       );
-      setWebhookMsg(`Job #${result.job_id} accepted — scoring async (simulates 2 timeouts then succeeds)`);
+      setWebhookMsg(`Job #${result.job_id} accepted — scoring runs in the background`);
       setTimeout(() => {
         reload();
         reloadJobs();
